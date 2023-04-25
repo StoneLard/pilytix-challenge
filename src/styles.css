@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  min-height: 100vh;
+  background: linear-gradient(220deg, #45e6f8, #0a8997 100%);
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  color: #0a193f;
+  padding: 0 1em 1em 1em;
+}
+
+@media (max-width: 840px) {
+  .App {
+    padding: 0 0.3em 0.3em 0.3em;
+  }
+}
+
+h2 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 2em;
+  padding: 2em;
+}
+
+.table {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.MuiTable-root th,
+.MuiTable-root td {
+  border: 0;
+}
+
+.MuiTableRow-root {
+  height: 4em;
+}
+
+.MuiTableBody-root .MuiTableRow-root {
+  cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .MuiTableRow-root {
+    height: 6em;
+  }
+}
+
+@media (max-width: 900px) {
+  .MuiTableRow-root {
+    height: 7em;
+  }
+}
+
+@media (max-width: 810px) {
+  .MuiTableRow-root {
+    height: 4em;
+  }
+  .MuiTableCell-root:nth-child(3) {
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .MuiTableRow-root {
+    height: 5em;
+  }
+}
+
+@media (max-width: 450px) {
+  .MuiTableRow-root {
+    height: 6em;
+  }
+}
+
+.MuiTableRow-head.MuiTableRow-root {
+  height: 4em;
+}
+
+.MuiTableRow-root:nth-child(even) {
+  background: #dbfff35d;
+}
+
+.MuiTableHead-root {
+  background: #4bddb5;
+}
+
+.MuiTableCell-head.MuiTableCell-root {
+  font-size: 1em;
+  color: #fff;
+}
+
+.MuiTableCell-root.MuiTableCell-body {
+  font-size: 0.9em;
+  color: #0a193f;
+}
+
+/*-------------------------------------
+MODAL--------------------------------*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal--content {
+  position: relative;
+  max-height: 90vh;
+  width: 90%;
+  max-width: 700px;
+  overflow-y: auto;
+  border-radius: 5px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(34, 34, 34, 0.2);
+  text-align: left;
+}
+
+.close--button {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0a193f;
+}
+
+/*-------------------------------------
+CARDs--------------------------------*/
+.card {
+  width: 100%;
+}
+.cards--control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 0;
+  background: none;
+  color: #fff;
+  text-transform: uppercase;
+  background: #74aefa;
+  cursor: pointer;
+}
+
+.btn.btn--next {
+  background: #4bddb5;
+}
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.prob--history {
+  text-align: center;
+}
+
+.inc--win h3 {
+  color: #4bddb5;
+}
+
+.dec--win h3 {
+  color: #74aefa;
+}
+
+.card--element {
+  margin-bottom: 30px;
+}
+
+.card--element:last-child {
+  margin-bottom: 0;
+}
+
+.common--inf {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+}
+
+.common--inf li {
+  padding: 10px;
+  border-bottom: 1px solid rgba(2, 2, 2, 0.1);
+}
+
+.common--inf li:nth-child(odd) {
+  font-weight: 600;
+}
+
+.common--inf li:nth-child(even) {
+  text-align: right;
+}
+
+.factors--list {
+  list-style: none;
+}
+
+.factors--list li {
+  padding: 10px;
+}
+
+.weak--positive {
+  color: rgb(189, 211, 141);
+  font-weight: 300;
+}
+
+.medium--positive {
+  color: rgb(104, 194, 141);
+  font-weight: 500;
+}
+
+.strong--positive {
+  color: #4bddb5;
+  font-weight: 700;
+}
+
+.weak--negative {
+  color: rgb(141, 179, 230);
+  font-weight: 300;
+}
+
+.medium--negative {
+  color: rgb(139, 172, 214);
+  font-weight: 500;
+}
+
+.strong--negative {
+  color: #74aefa;
+  font-weight: 700;
+}
+
+.factors--list li span {
+  font-weight: 600;
+  color: #0a193f;
+}
+
+.prob--chart {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.recharts-wrapper {
+  margin-left: -20px;
+}
+
+.chart--desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-left: 40px;
+}
+.chart--desc span {
+  position: relative;
+}
+.pilytix--prob::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #74aefa;
+  top: 4px;
+  left: -22px;
+}
+
+.rep--prob::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: #4bddb5;
+  top: -7px;
+}
+
+@media (max-width: 500px) {
+  .chart--desc {
+    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .rep--prob::before {
+    top: 15px;
+    left: -88px;
+  }
+}
