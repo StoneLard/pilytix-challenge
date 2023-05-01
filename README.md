@@ -1,4 +1,7 @@
-# Opportunity Card React Take-Home Assignment
+
+## Test task for Pilytix, developed with React
+
+## Opportunity Card React Take-Home Assignment
 
 _Author: Hendrik Kits van Heyningen_
 
